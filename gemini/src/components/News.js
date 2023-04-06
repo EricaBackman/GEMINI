@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import NewsImage from '../images/crystal-L4.jpg'
+import NewsImage from '../images/Crystals/crystal-L4.jpg'
 
 function News() {
   return (

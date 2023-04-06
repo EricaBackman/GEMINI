@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import backgroundImage from '../images/crystal-L1.jpg'
+import backgroundImage from '../images/Crystals/crystal-L1.jpg'
 
 function HeroProduct() {
   return (
