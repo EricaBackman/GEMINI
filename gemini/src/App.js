@@ -6,7 +6,7 @@ import SearchBar from './components/SearchBar'
 import HeroProduct from './components/HeroProduct'
 import NavbarBottom from './components/NavbarBottom'
 import News from './components/News'
-import Categories from './components/Categories'
+import CategoriesCarousel from './components/CategoriesCarousel'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <SearchBar />
       <HeroProduct />
       <News />
-      <Categories />
+      <CategoriesCarousel />
       <NavbarBottom />
     </div>
   )

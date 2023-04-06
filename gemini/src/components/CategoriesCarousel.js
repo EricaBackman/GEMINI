@@ -7,7 +7,7 @@ import Crystals from '../images/Crystals/L12.jpg'
 import Etherics from '../images/Etheric/L5.jpg'
 import Tarotes from '../images/Tarot/L11.jpg'
 
-function Categories() {
+function CategoriesCarousel() {
   return (
     <>
     <CategoryWrapper>
@@ -36,7 +36,7 @@ function Categories() {
   )
 }
 
-export default Categories
+export default CategoriesCarousel
 
 const CategoryWrapper = styled.div`
 
