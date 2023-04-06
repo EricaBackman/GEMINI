@@ -6,7 +6,7 @@ import SearchBar from './components/SearchBar'
 import HeroProduct from './components/HeroProduct'
 import NavbarBottom from './components/NavbarBottom'
 import News from './components/News'
-import Categories from './components/Categorys'
+import Categories from './components/Categories'
 
 
 function App() {
