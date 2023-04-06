@@ -4,6 +4,9 @@ import './App.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//import bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+
 // createBrowserRouter
 
 

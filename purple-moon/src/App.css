@@ -3,7 +3,7 @@
   font-family: 'Darker Grotesque', sans-serif;
 }
 
-body {
+html, body {
   height: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -11,10 +11,10 @@ body {
   padding: 0;
 }
 
-/* .App {
+.App {
   text-align: center;
 }
-
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
