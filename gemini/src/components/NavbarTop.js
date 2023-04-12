@@ -27,6 +27,7 @@ const NavbarWrap = styled.div`
   align-items: center;
   background-color: #353240;
   height: 3rem;
+  width: 100%;
 `
 
 const NavbarLinkWrap = styled.div`

@@ -51,7 +51,7 @@ align-items: center;
 `
 
 const Menu = styled.div`
-
+z-index: 1000;
 display: flex;
 flex-direction: column;
 justify-content: center;

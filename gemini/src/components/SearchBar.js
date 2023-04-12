@@ -40,6 +40,7 @@ const SearchBarWrapper = styled.div`
   border-color: #9f97bf;
   background-color: white;
   height: 66px;
+  width: 100%;
 
   .close::-webkit-search-cancel-button {
     position: relative;

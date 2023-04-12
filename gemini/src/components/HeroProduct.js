@@ -27,6 +27,7 @@ align-items: center;
 height: 25rem;
 background-repeat: no-repeat;
 background-size: cover;
+width: 100%;
 `
 
 const Hero = styled.div`

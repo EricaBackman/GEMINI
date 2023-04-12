@@ -1,61 +1,135 @@
 import React from 'react'
 import styled from 'styled-components'
+// import bgImage from '../images/Etheric/L12.jpg'
 
-//Import images
-import Incenses from '../images/Incenses/L1.jpg'
-import Crystals from '../images/Crystals/L12.jpg'
-import Etherics from '../images/Etheric/L5.jpg'
-import Tarotes from '../images/Tarot/L11.jpg'
-
-function CategoriesCarousel() {
+const CategoriesCarousel = ({ images }) => {
   return (
-    <>
-    <CategoryWrapper>
-    <Header>
-        <h2>KATEGORIER</h2>
-      </Header>
-      <SlideWrapper>
-        <Incense>
-          <img src={Incenses} alt="Rökelse" />
-        </Incense>
-        <Crystal>
-          <img src={Crystals} alt="Gröna stenar" />
-        </Crystal>
-        <Etheric>
-          <img src={Etherics} alt="Eterisk olja" />
-        </Etheric>
-        <Tarot>
-          <img src={Tarotes} alt="Tarotkort" />
-        </Tarot>
-
-      </SlideWrapper>
-    </CategoryWrapper>
-
-
-    </>
+    <CarouselWrapper className="wrapper">
+      <div className="carousel-containter">
+        <h2 className="header">KATEGORIER</h2>
+        <div className="carousel">
+          {images.map((img) => {
+            return (
+              <div className="carousel-item" key={`${img.title}`}>
+                <img className="image" src={img.src} alt={img.title} />
+                <button className="category-btn">{img.title}</button>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </CarouselWrapper>
   )
 }
 
 export default CategoriesCarousel
 
-const CategoryWrapper = styled.div`
+const CarouselWrapper = styled.div`
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  background-color: rgba(159, 151, 191, 0.18);
 
-`
-const Header = styled.div`
+  .header {
+    font-size: 2rem;
+    background-color: white;
+    padding-bottom: 2rem;
+  }
+  .carousel-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
 
-`
-const SlideWrapper = styled.div`
+  .carousel {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
 
-`
-const Incense = styled.div`
+  .carousel::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
 
-`
-const Crystal = styled.div`
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    margin: 20px 10px 10px 10px;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+  }
 
-`
-const Etheric = styled.div`
+  .carousel-item img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
 
-`
-const Tarot = styled.div`
+  .carousel-item button {
+    width: 170px;
+    height: 35px;
+    font-family: 'Darker Grotesque', sans-serif;
+    border: none;
+    border-radius: 3px;
+    background-color: #6a6580;
+    color: white;
+    padding: 3px 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
 
+  @media (min-width: 600px) {
+
+    .carousel-container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .carousel {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      margin-right: 10px;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+
+    .carousel-item {
+      width: 130px;
+      height: 180px;
+      margin: 0;
+      padding: 0;
+      flex: 1 0 0%;
+
+    }
+
+    .carousel-item img {
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
 `

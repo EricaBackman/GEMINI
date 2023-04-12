@@ -5,7 +5,7 @@ import NewsImage from '../images/Crystals/crystal-L4.jpg'
 function News() {
   return (
     <>
-    <newsWrapper>
+    <NewsWrapper>
     <Header>
         <h2>NYHETER</h2>
       </Header>
@@ -15,15 +15,25 @@ function News() {
       <Button>
       <button>TILL NYHETER</button>
       </Button>
-    </newsWrapper>
+    </NewsWrapper>
     </>
   )
 }
 
 export default News
 
+const NewsWrapper = styled.div`
+width: 100%;
+
+margin: 0;
+padding: 0;
+`
 const Header = styled.div`
 margin-top: 1.5rem;
+
+h2 {
+  font-size: 2rem;
+}
 `
 const Image = styled.div`
 margin: 1.5rem 0rem;
@@ -46,7 +56,7 @@ button {
   background-color: #6A6580;
   color: white;
   padding: 0;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
 }
 `
