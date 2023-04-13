@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import bgImage from '../images/Etheric/L12.jpg'
+import { Link } from 'react-router-dom'
 
 const CategoriesCarousel = ({ images }) => {
   return (
@@ -12,7 +12,7 @@ const CategoriesCarousel = ({ images }) => {
             return (
               <div className="carousel-item" key={`${img.title}`}>
                 <img className="image" src={img.src} alt={img.title} />
-                <button className="category-btn">{img.title}</button>
+               <Link to={`/products/${img.title}`}><button className="category-btn">{img.title}</button></Link>
               </div>
             )
           })}

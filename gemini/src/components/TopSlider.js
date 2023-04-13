@@ -3,18 +3,21 @@ import styled from 'styled-components'
 
 function TopSlider() {
   return (
-    <div>
+    <>
       <Wrap>
         <p>Fri frakt och fria returer* </p>
         <p>Fri hemleverans vid köp över 299kr</p>
       </Wrap>
-    </div>
+    </>
   )
 }
 
 export default TopSlider
 
 const Wrap = styled.div`
+position: sticky;
+top: 0;
+z-index: 1;
 display: flex;
 flex-direction: column;
 justify-content: center;

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import NewsImage from '../images/Crystals/crystal-L4.jpg'
+import NewsImage from '../images/Crystals/L4.jpg'
+import { Link } from 'react-router-dom'
 
 function News() {
   return (
@@ -13,7 +14,7 @@ function News() {
         <img className='news-image' src={NewsImage} alt="" />
       </Image>
       <Button>
-      <button>TILL NYHETER</button>
+      <Link to="/products/NYHETER"><button>TILL NYHETER</button></Link>
       </Button>
     </NewsWrapper>
     </>

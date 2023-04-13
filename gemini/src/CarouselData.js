@@ -1,7 +1,7 @@
-import incense from './images/Incenses/L1.jpg'
-import crystal from './images/Crystals/L12.jpg'
-import etheric from './images/Etheric/L5.jpg'
-import tarot from './images/Tarot/L11.jpg'
+import incense from './images/Incenses/LH1.jpg'
+import crystal from './images/Crystals/LH2.jpg'
+import etheric from './images/Etheric/LH5.jpg'
+import tarot from './images/Tarot/LH2.jpg'
 
 const carouselData = [
   {

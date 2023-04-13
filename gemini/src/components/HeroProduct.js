@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import backgroundImage from '../images/Crystals/crystal-L1.jpg'
+import backgroundImage from '../images/Crystals/L1.jpg'
+import { Link } from 'react-router-dom'
 
 function HeroProduct() {
   return (
@@ -9,7 +10,8 @@ function HeroProduct() {
    <Hero>
       <h1>Erbjudande</h1>
       <h2>3 för 2 på alla kristaller</h2>
-      <button>TILL KRISTALLER</button>
+      <Link to={`/products/KRISTALLER`}><button>TILL KRISTALLER</button></Link>
+
     </Hero>
    </HeroBackground>
 
