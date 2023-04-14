@@ -52,9 +52,7 @@ function ProductPage() {
                   to={`/products/${card.category}/${card.id}`}
                 >
                   <p className="title">{card.title}</p>
-                  <p className="price">
-                    {card.price} {card.currency}
-                  </p>
+                  <p className="price">{card.price} {card.currency}</p>
                 </Link>
                 <Link className="link" to={`/products/${card.category}`}>
                   <p className="category">{card.category}</p>
@@ -97,7 +95,7 @@ const Products = styled.div`
     align-items: left;
     margin: 0;
     color: black;
-    text-decoration-line: none;
+    text-decoration: none;
   }
 
   .title {

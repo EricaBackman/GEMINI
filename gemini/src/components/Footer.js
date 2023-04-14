@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Footer() {
   return (
     <>
-    <FooterWrapper>
+    <FooterWrapper className='footer'>
       <SocialMedia>
         <div className='logo'>
         <ion-icon name="logo-facebook"></ion-icon>

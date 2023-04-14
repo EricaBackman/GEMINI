@@ -9,23 +9,32 @@ import { Routes, Route } from 'react-router-dom'
 import ErrorPage from './pages/ErrorPage'
 import Products from './pages/Products'
 import ProductItem from './pages/ProductItem'
+import { ColorContext } from './context/ColorContext'
+import { useState } from 'react'
+
 
 function App() {
-  return (
-    <div className="App">
-      <TopSlider />
-      <NavbarTop />
-      <SearchBar />
+  const [theme, setTheme] = useState('light')
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<ErrorPage />} />
-        <Route path="/products/:category" element={<Products />} />
-        <Route path="/products/:category/:id" element={<ProductItem />} />
-      </Routes>
-      <Footer />
-      <NavbarBottom />
-    </div>
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
+  }
+  return (
+    <ColorContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App" id={theme}>
+        <TopSlider />
+        <NavbarTop />
+        <SearchBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<ErrorPage />} />
+          <Route path="/products/:category" element={<Products />} />
+          <Route path="/products/:category/:id" element={<ProductItem />} />
+        </Routes>
+        <Footer />
+        <NavbarBottom />
+      </div>
+    </ColorContext.Provider>
   )
 }
 

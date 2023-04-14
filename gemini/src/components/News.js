@@ -58,6 +58,5 @@ button {
   color: white;
   padding: 0;
   margin-bottom: 3rem;
-
 }
 `

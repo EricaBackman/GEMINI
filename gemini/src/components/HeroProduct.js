@@ -7,7 +7,7 @@ function HeroProduct() {
   return (
    <>
    <HeroBackground style={{backgroundImage: `url(${backgroundImage})`}}>
-   <Hero>
+   <Hero className='hero'>
       <h1>Erbjudande</h1>
       <h2>3 för 2 på alla kristaller</h2>
       <Link to={`/products/KRISTALLER`}><button>TILL KRISTALLER</button></Link>

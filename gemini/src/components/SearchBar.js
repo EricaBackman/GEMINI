@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 
-
 function SearchBar() {
   const [searchInput, setSearchInput] = useState('')
 
@@ -13,10 +12,9 @@ function SearchBar() {
 
   return (
     <>
-      <script></script>
-      <SearchBarWrapper>
+      <SearchBarWrapper className='color'>
         <SearchInput
-          className="close"
+          className="input"
           type="search"
           placeholder="SÖK"
           onChange={handleChange}
