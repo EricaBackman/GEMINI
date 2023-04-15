@@ -46,6 +46,7 @@ const CarouselWrapper = styled.div`
   .carousel {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     width: 100%;
     height: 100%;
     margin-top: 50px;

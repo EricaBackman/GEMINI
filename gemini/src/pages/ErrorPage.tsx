@@ -2,11 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-function ErrorPage() {
+type ErrorMsg = {
+  errormsg: string
+}
+
+function ErrorPage(props: ErrorMsg) {
   return (
     <>
     <Error>
-      <h1>Hoppsan, det gick inte riktigt som det skulle här!</h1>
+      <h1>{props.errormsg}, det gick inte riktigt som det skulle här!</h1>
       <Link to={"/"}>
       <button>TILLBAKA TILL STARTSIDAN</button>
       </Link>

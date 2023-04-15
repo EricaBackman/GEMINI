@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import IncenseImage from '../images/Incenses/LS7.jpg'
-import CrystalImage from '../images/Crystals/LH5.jpg'
-import EthericImage from '../images/Etheric/LH6.jpg'
-import TarotImage from '../images/Tarot/LH1.jpg'
+import IncenseImage from '../images/Incenses/L19.jpg'
+import CrystalImage from '../images/Crystals/L6.jpg'
+import EthericImage from '../images/Etheric/L11.jpg'
+import TarotImage from '../images/Tarot/L8.jpg'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import MoonIcon from '../components/MoonIcon'
@@ -27,7 +27,7 @@ function ProductPage() {
 
   return (
     <>
-      <TarotOrakel>
+      <TarotOrakel className='cate-wrapper'>
         <h1>{category}</h1>
         {category === 'RÖKELSER' && <img src={IncenseImage} alt="Incense" />}
         {category === 'KRISTALLER' && <img src={CrystalImage} alt="Crystals" />}
@@ -70,15 +70,25 @@ function ProductPage() {
 export default ProductPage
 
 const TarotOrakel = styled.div`
+
   img {
-    height: 300px;
+    height: auto;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: 900px) {
+img {
+  height: 90vh;
+  width: 100%;
+}
   }
 `
 
 const Products = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   row-gap: 1rem;
   justify-items: center;
@@ -123,27 +133,18 @@ const Products = styled.div`
     text-decoration: none;
   }
 
+  @media (min-width: 350px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media (min-width: 600px) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    row-gap: 1rem;
-    justify-items: center;
-    margin-top: 3rem;
   }
 
   @media (min-width: 800px) {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    row-gap: 1rem;
-    justify-items: center;
-    margin-top: 3rem;
   }
-
   @media (min-width: 1200px) {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    row-gap: 1rem;
-    justify-items: center;
-    margin-top: 3rem;
   }
 `

@@ -11,7 +11,6 @@ function HeroProduct() {
       <h1>Erbjudande</h1>
       <h2>3 för 2 på alla kristaller</h2>
       <Link to={`/products/KRISTALLER`}><button>TILL KRISTALLER</button></Link>
-
     </Hero>
    </HeroBackground>
 
@@ -30,6 +29,12 @@ height: 25rem;
 background-repeat: no-repeat;
 background-size: cover;
 width: 100%;
+padding: 0;
+margin-top: 0;
+
+@media (min-width: 900px) {
+height: 30rem;
+}
 `
 
 const Hero = styled.div`
@@ -63,6 +68,7 @@ button {
   background-color: #6A6580;
   color: white;
   padding: 0;
+  margin-top: 20px;
 
 }
 `

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import * as Icon from 'react-feather'
 import logo from '../images/Logos/LOGO1.png'
+import { Link } from 'react-router-dom'
 
 function NavbarBottom() {
   return (
@@ -16,9 +17,11 @@ function NavbarBottom() {
           <Icon.User className="user" />
           <p>LOGGA IN</p>
         </User>
+        <Link to={"/"}>
         <Logo>
           <img src={logo} alt="logo" />
         </Logo>
+        </Link>
         <Favorites>
           <Icon.Moon className="favorites" />
           <p>FAVORITER</p>
